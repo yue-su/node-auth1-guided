@@ -1,5 +1,5 @@
 const router = require("express").Router();
-
+const bcrypt = require("bcryptjs")
 const Users = require("./users-model.js");
 
 router.get("/", (req, res) => {
@@ -9,5 +9,6 @@ router.get("/", (req, res) => {
     })
     .catch(err => res.send(err));
 });
+
 
 module.exports = router;
